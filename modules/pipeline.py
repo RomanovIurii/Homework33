@@ -1,7 +1,6 @@
 import logging
 import os
 from datetime import datetime
-
 import dill
 import pandas as pd
 from sklearn.compose import ColumnTransformer, make_column_selector
@@ -15,9 +14,6 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
-# Укажем путь к файлам проекта:
-# -> $PROJECT_PATH при запуске в Airflow
-# -> иначе - текущая директория при локальном запуске
 path = os.environ.get('PROJECT_PATH', '/Users/ninaromanova/airflow_hw')
 
 def pipeline() -> None:
